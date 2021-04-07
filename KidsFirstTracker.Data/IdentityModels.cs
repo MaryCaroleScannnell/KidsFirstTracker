@@ -32,6 +32,9 @@ namespace KidsFirstTracker.Data
             return new ApplicationDbContext();
         }
         public DbSet<DomFamily> DomFamilies { get; set; }
+        public DbSet<IntFamily> IntFamilies { get; set; }
+        public DbSet<HomeStudy> HomeStudies { get; set; }
+        public DbSet<Preference> Preferences { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

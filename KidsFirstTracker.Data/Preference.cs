@@ -16,6 +16,8 @@ namespace KidsFirstTracker.Data
     }
     public class Preference
     {
+        [Key]
+        public int PreferenceId { get; set; }
         [ForeignKey(nameof(DomFamily))]
         public int? DomFamId { get; set; }
         public virtual DomFamily DomFamily { get; set; }
