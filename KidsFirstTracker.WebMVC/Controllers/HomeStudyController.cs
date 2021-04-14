@@ -16,5 +16,21 @@ namespace KidsFirstTracker.WebMVC.Controllers
             var model = new HomeStudyListItem();
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(HomeStudyCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

@@ -243,6 +243,10 @@
     <Content Include="Views\IntFamily\Index.cshtml" />
     <Content Include="Views\HomeStudy\Index.cshtml" />
     <Content Include="Views\DomFamily\Index.cshtml" />
+    <Content Include="Views\DomFamily\Create.cshtml" />
+    <Content Include="Views\IntFamily\Create.cshtml" />
+    <Content Include="Views\HomeStudy\Create.cshtml" />
+    <Content Include="Views\Preferences\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
