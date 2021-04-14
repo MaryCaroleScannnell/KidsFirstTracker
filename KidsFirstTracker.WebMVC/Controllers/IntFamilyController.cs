@@ -1,4 +1,5 @@
 ﻿using KidsFirstTracker.Models;
+using KidsFirstTracker.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,10 @@ namespace KidsFirstTracker.WebMVC.Controllers
         // GET: IntFamily
         public ActionResult Index()
         {
-            var model = new IntFamilyListItem[0];
+            var service = new IntFamilyService();
+            var model = service.GetIntFamily();
+
+
             return View(model);
         }
 
@@ -28,9 +32,11 @@ namespace KidsFirstTracker.WebMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+            var service = new IntFamilyService();
+            service.CreateIntFamily(model);
+            return RedirectToAction("Index");
         }
     }
 }

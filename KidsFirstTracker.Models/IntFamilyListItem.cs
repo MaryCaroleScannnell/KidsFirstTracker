@@ -10,6 +10,7 @@ namespace KidsFirstTracker.Models
 {
     public class IntFamilyListItem : ContactInfoListItem
     {
+        public int IntFamId { get; set; }
         public Country Country { get; set; }
 
         [Display(Name = "USCIS Expiration")]

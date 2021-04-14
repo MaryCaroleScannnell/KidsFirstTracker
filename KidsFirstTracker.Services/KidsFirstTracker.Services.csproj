@@ -54,11 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomFamilyService.cs" />
+    <Compile Include="HomeStudyService.cs" />
+    <Compile Include="IntFamilyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KidsFirstTracker.Data\KidsFirstTracker.Data.csproj">
+      <Project>{9c5c3d0e-17e6-420c-8512-984777b1be30}</Project>
+      <Name>KidsFirstTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KidsFirstTracker.Models\KidsFirstTracker.Models.csproj">
+      <Project>{502bc957-06cd-426e-b942-dfdcd20d41f9}</Project>
+      <Name>KidsFirstTracker.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

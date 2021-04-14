@@ -9,6 +9,7 @@ namespace KidsFirstTracker.Models
 {
     public class HomeStudyListItem : ContactInfoListItem
     {
+        public int HomeStudyId { get; set; }
         [Display(Name = "Type of Home Study")]
         public Data.HomeStudyType TypeOfHomeStudy { get; set; }
         

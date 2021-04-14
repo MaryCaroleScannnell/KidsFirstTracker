@@ -1,4 +1,5 @@
 ﻿using KidsFirstTracker.Models;
+using KidsFirstTracker.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,10 @@ namespace KidsFirstTracker.WebMVC.Controllers
         // GET: HomeStudy
         public ActionResult Index()
         {
-            var model = new HomeStudyListItem[0];
+            var service = new HomeStudyService();
+            var model = service.GetHomeStudy();
+
+
             return View(model);
         }
 
@@ -28,9 +32,11 @@ namespace KidsFirstTracker.WebMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+            var service = new HomeStudyService();
+            service.CreateHomeStudy(model);
+            return RedirectToAction("Index");
         }
     }
 }

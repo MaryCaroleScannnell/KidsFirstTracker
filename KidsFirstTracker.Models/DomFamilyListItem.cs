@@ -9,6 +9,7 @@ namespace KidsFirstTracker.Models
 {
     public class DomFamilyListItem : ContactInfoListItem
     {
+        public int DomFamId { get; set; }
         [Display(Name = "Home Study Completed")]
         public bool IsHomeStudyDone { get; set; }
 
