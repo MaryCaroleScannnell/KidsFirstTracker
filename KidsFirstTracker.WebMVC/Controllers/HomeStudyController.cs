@@ -13,7 +13,7 @@ namespace KidsFirstTracker.WebMVC.Controllers
         // GET: HomeStudy
         public ActionResult Index()
         {
-            var model = new HomeStudyListItem();
+            var model = new HomeStudyListItem[0];
             return View(model);
         }
 
