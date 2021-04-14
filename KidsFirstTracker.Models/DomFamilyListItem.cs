@@ -5,19 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KidsFirstTracker.Data
+namespace KidsFirstTracker.Models
 {
-    public class DomFamily : ContactInfo
+    public class DomFamilyListItem : ContactInfoListItem
     {
-        [Key]
-        public int DomFamId { get; set; }
-        
-        [Required]
         [Display(Name = "Home Study Completed")]
         public bool IsHomeStudyDone { get; set; }
-       
+
         [Display(Name = "Date of Home Study")]
         public DateTime? HomeStudyDate { get; set; }
-
+        
     }
 }
