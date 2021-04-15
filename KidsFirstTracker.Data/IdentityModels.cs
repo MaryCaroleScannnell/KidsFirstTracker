@@ -31,7 +31,7 @@ namespace KidsFirstTracker.Data
         {
             return new ApplicationDbContext();
         }
-        public DbSet<ContactInfo> ContactInfos { get; set; }
+        //public DbSet<ContactInfo> ContactInfos { get; set; }
         public DbSet<DomFamily> DomFamilies { get; set; }
         public DbSet<IntFamily> IntFamilies { get; set; }
         public DbSet<HomeStudy> HomeStudies { get; set; }

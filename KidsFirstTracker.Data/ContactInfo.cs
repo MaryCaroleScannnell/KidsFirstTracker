@@ -9,8 +9,7 @@ namespace KidsFirstTracker.Data
 {
     public abstract class ContactInfo
     {
-        [Key]
-        public int FamilyId { get; set; }
+       
         [Required]
         [Display(Name = "Parent #1's Name")]
         public string Parent1Name { get; set; }
