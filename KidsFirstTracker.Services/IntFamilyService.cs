@@ -10,9 +10,10 @@ namespace KidsFirstTracker.Services
 {
     public class IntFamilyService
     {
-        public IntFamilyService()
+        private readonly Guid _userId;
+        public IntFamilyService(Guid userId)
         {
-
+            _userId = userId;
         }
 
         public bool CreateIntFamily(IntFamilyCreate model)
@@ -20,7 +21,7 @@ namespace KidsFirstTracker.Services
             var entity =
                 new IntFamily()
                 {
-
+                    OwnerId = _userId,
                     Parent1Name = model.Parent1Name,
                     Parent2Name = model.Parent2Name,
                     PhoneNumber = model.PhoneNumber,
@@ -42,7 +43,7 @@ namespace KidsFirstTracker.Services
                 var query =
                     ctx
                         .IntFamilies
-
+                        .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new IntFamilyListItem

@@ -10,9 +10,10 @@ namespace KidsFirstTracker.Services
 {
     public class DomFamilyService  
     {
-        public DomFamilyService()
+        private readonly Guid _userId;
+        public DomFamilyService(Guid userId)
         {
-            
+            _userId = userId; 
         }
 
         public bool CreateDomFamily(DomFamilyCreate model)
@@ -20,7 +21,7 @@ namespace KidsFirstTracker.Services
             var entity =
                 new DomFamily()
                 {
-                    
+                    OwnerId = _userId,
                     Parent1Name = model.Parent1Name,
                     Parent2Name = model.Parent2Name,
                     PhoneNumber = model.PhoneNumber,
@@ -42,7 +43,7 @@ namespace KidsFirstTracker.Services
                 var query =
                     ctx
                         .DomFamilies
-                        
+                        .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new DomFamilyListItem

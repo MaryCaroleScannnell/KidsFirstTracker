@@ -11,7 +11,7 @@ namespace KidsFirstTracker.Data
     {
         [Key]
         public int DomFamId { get; set; }
-        
+        public Guid OwnerId { get; set; }
         [Required]
         [Display(Name = "Home Study Completed")]
         public bool IsHomeStudyDone { get; set; }

@@ -19,7 +19,8 @@ namespace KidsFirstTracker.Data
     {
         [Key]
         public int IntFamId { get; set; }
-        
+
+        public Guid OwnerId { get; set; }
         [Required]
         public Country Country { get; set; }
 

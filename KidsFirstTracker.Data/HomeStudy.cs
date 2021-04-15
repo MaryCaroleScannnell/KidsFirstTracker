@@ -24,7 +24,8 @@ namespace KidsFirstTracker.Data
 
         [Key]
         public int HomeStudyId { get; set; }
-        
+
+        public Guid OwnerId { get; set; }
         [Required]
         [Display(Name = "Type of Home Study")]
         public HomeStudyType TypeOfHomeStudy { get; set; }

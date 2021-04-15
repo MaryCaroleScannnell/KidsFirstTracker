@@ -1,5 +1,6 @@
 ﻿using KidsFirstTracker.Models;
 using KidsFirstTracker.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace KidsFirstTracker.WebMVC.Controllers
         // GET: HomeStudy
         public ActionResult Index()
         {
-            var service = new HomeStudyService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new HomeStudyService(userId);
             var model = service.GetHomeStudy();
 
 
@@ -34,7 +36,9 @@ namespace KidsFirstTracker.WebMVC.Controllers
             {
                 return View(model);
             }
-            var service = new HomeStudyService();
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new HomeStudyService(userId);
             service.CreateHomeStudy(model);
             return RedirectToAction("Index");
         }

@@ -1,5 +1,6 @@
 ﻿using KidsFirstTracker.Models;
 using KidsFirstTracker.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace KidsFirstTracker.WebMVC.Controllers
         // GET: DomFamily
         public ActionResult Index()
         {
-            var service = new DomFamilyService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new DomFamilyService(userId);
             var model = service.GetDomFamily();
 
 
@@ -34,7 +36,8 @@ namespace KidsFirstTracker.WebMVC.Controllers
             {
                 return View(model);
             }
-            var service = new DomFamilyService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new DomFamilyService(userId);
             service.CreateDomFamily(model);
             return RedirectToAction("Index");
         }
