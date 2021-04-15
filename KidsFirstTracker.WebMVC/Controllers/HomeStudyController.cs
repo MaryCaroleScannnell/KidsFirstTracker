@@ -37,10 +37,16 @@ namespace KidsFirstTracker.WebMVC.Controllers
                 return View(model);
             }
 
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new HomeStudyService(userId);
+            var service = CreateHomeStudyService();
             service.CreateHomeStudy(model);
             return RedirectToAction("Index");
+        }
+
+        private HomeStudyService CreateHomeStudyService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new HomeStudyService(userId);
+            return service;
         }
     }
 }
