@@ -32,14 +32,18 @@ namespace KidsFirstTracker.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IntFamilyCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(model);
+            
+            var service = CreateIntFamilyService();
+
+            if (service.CreateIntFamily(model))
             {
-                return View(model);
+                TempData["SaveResult"] = "Your family was created.";
+                return RedirectToAction("Index");
             }
 
-            var service = CreateIntFamilyService();
-            service.CreateIntFamily(model);
-            return RedirectToAction("Index");
+            ModelState.AddModelError("", "Your family could not be created.");
+            return View(model);
         }
 
         private IntFamilyService CreateIntFamilyService()

@@ -32,14 +32,20 @@ namespace KidsFirstTracker.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(HomeStudyCreate model)
         {
-            if (ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
+            
 
             var service = CreateHomeStudyService();
-            service.CreateHomeStudy(model);
-            return RedirectToAction("Index");
+
+            if (service.CreateHomeStudy(model))
+            {
+                return RedirectToAction("Index");
+            }
+
+            TempData["SaveResult"] = "Your family was created.";
+            ModelState.AddModelError("", "Your family could not be created.");
+            
+            return View(model);
         }
 
         private HomeStudyService CreateHomeStudyService()
