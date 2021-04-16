@@ -45,7 +45,14 @@ namespace KidsFirstTracker.WebMVC.Controllers
             ModelState.AddModelError("", "Your family could not be created.");
             return View(model);
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateIntFamilyService();
+            var model = svc.GetIntFamilyById(id);
 
+            return View(model);
+        
+        }
         private IntFamilyService CreateIntFamilyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

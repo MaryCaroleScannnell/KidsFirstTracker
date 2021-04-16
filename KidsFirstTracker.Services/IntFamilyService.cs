@@ -62,7 +62,27 @@ namespace KidsFirstTracker.Services
             }
         }
 
-
+        public IntFamilyDetail GetIntFamilyById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .IntFamilies
+                        .Single(e => e.IntFamId == id && e.OwnerId == _userId);
+                return
+                    new IntFamilyDetail
+                    {
+                        IntFamId = entity.IntFamId,
+                        Parent1Name = entity.Parent1Name,
+                        Parent2Name = entity.Parent2Name,
+                        PhoneNumber = entity.PhoneNumber,
+                        Email = entity.Email,
+                        Country = entity.Country,
+                        USCISExpiration = entity.USCISExpiration
+                    };
+            }
+        }
 
     }
 }

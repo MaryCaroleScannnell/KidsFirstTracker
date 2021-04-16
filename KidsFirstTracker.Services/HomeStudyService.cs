@@ -62,7 +62,28 @@ namespace KidsFirstTracker.Services
             }
         }
 
-
+        public HomeStudyDetail GetHomeStudyById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .HomeStudies
+                        .Single(e => e.HomeStudyId == id && e.OwnerId == _userId);
+                return
+                    new HomeStudyDetail
+                    {
+                        HomeStudyId = entity.HomeStudyId,
+                        Parent1Name = entity.Parent1Name,
+                        Parent2Name = entity.Parent2Name,
+                        PhoneNumber = entity.PhoneNumber,
+                        Email = entity.Email,
+                        TypeOfHomeStudy = entity.TypeOfHomeStudy,
+                        Agency = entity.Agency
+                    };
+            }
+        
+        }
 
     }
 }

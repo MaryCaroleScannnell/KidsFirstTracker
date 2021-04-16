@@ -48,6 +48,15 @@ namespace KidsFirstTracker.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateHomeStudyService();
+            var model = svc.GetHomeStudyById(id);
+
+            return View(model);
+        
+        }
+
         private HomeStudyService CreateHomeStudyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

@@ -62,7 +62,29 @@ namespace KidsFirstTracker.Services
             }
         }
 
+        public DomFamilyDetail GetDomFamilyById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DomFamilies
+                        .Single(e => e.DomFamId == id && e.OwnerId == _userId);
+                return
+                    new DomFamilyDetail
+                    {
+                        DomFamId =entity.DomFamId,
+                        Parent1Name = entity.Parent1Name,
+                        Parent2Name = entity.Parent2Name,
+                        PhoneNumber = entity.PhoneNumber,
+                        Email = entity.Email,
+                        IsHomeStudyDone = entity.IsHomeStudyDone,
+                        HomeStudyDate = entity.HomeStudyDate
+                    };
+            }
 
+
+        }
 
     }
 }
