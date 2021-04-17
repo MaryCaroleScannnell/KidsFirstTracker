@@ -51,8 +51,6 @@ namespace KidsFirstTracker.Services
                                     HomeStudyId = e.HomeStudyId,
                                     Parent1Name = e.Parent1Name,
                                     Parent2Name = e.Parent2Name,
-                                    PhoneNumber = e.PhoneNumber,
-                                    Email = e.Email,
                                     TypeOfHomeStudy = e.TypeOfHomeStudy,
                                     Agency = e.Agency
                                 }

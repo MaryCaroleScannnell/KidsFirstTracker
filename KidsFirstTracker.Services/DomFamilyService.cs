@@ -51,8 +51,6 @@ namespace KidsFirstTracker.Services
                                     DomFamId = e.DomFamId,
                                     Parent1Name = e.Parent1Name,
                                     Parent2Name = e.Parent2Name,
-                                    PhoneNumber = e.PhoneNumber,
-                                    Email = e.Email,
                                     IsHomeStudyDone = e.IsHomeStudyDone,
                                     HomeStudyDate = e.HomeStudyDate
                                 }

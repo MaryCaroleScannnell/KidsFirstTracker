@@ -51,8 +51,6 @@ namespace KidsFirstTracker.Services
                                     IntFamId = e.IntFamId,
                                     Parent1Name = e.Parent1Name,
                                     Parent2Name = e.Parent2Name,
-                                    PhoneNumber = e.PhoneNumber,
-                                    Email = e.Email,
                                     Country = e.Country,
                                     USCISExpiration = e.USCISExpiration
                                 }

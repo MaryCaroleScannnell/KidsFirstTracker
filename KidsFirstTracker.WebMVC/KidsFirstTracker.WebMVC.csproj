@@ -240,13 +240,16 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ContactInfo\Index.cshtml" />
-    <Content Include="Views\IntFamily\Index.cshtml" />
     <Content Include="Views\HomeStudy\Index.cshtml" />
     <Content Include="Views\DomFamily\Index.cshtml" />
     <Content Include="Views\DomFamily\Create.cshtml" />
     <Content Include="Views\IntFamily\Create.cshtml" />
     <Content Include="Views\HomeStudy\Create.cshtml" />
     <Content Include="Views\Preferences\Create.cshtml" />
+    <Content Include="Views\IntFamily\Index.cshtml" />
+    <Content Include="Views\IntFamily\Details.cshtml" />
+    <Content Include="Views\HomeStudy\Details.cshtml" />
+    <Content Include="Views\DomFamily\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

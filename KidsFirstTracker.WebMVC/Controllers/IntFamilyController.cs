@@ -18,7 +18,7 @@ namespace KidsFirstTracker.WebMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new IntFamilyService(userId);
             var model = service.GetIntFamily();
-
+           // var model = new IntFamilyListItem[0];
 
             return View(model);
         }

@@ -1,0 +1,66 @@
+﻿@model KidsFirstTracker.Models.HomeStudyDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HomeStudyDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent1Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent2Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeStudyId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeStudyId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Agency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agency)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id =Model.HomeStudyId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

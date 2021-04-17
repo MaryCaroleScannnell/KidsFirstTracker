@@ -1,0 +1,74 @@
+﻿@model KidsFirstTracker.Models.DomFamilyDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DomFamilyDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent1Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent2Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DomFamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomFamId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHomeStudyDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHomeStudyDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeStudyDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeStudyDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DomFamId}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

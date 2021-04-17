@@ -1,0 +1,66 @@
+﻿@model KidsFirstTracker.Models.IntFamilyDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IntFamilyDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent1Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent1Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parent2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parent2Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntFamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntFamId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USCISExpiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USCISExpiration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id =Model.IntFamId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
