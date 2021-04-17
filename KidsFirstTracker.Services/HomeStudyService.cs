@@ -83,5 +83,27 @@ namespace KidsFirstTracker.Services
         
         }
 
+        public bool UpdateHomeStudy(HomeStudyEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .HomeStudies
+                        .Single(e => e.HomeStudyId == model.HomeStudyId && e.OwnerId == _userId);
+
+                entity.Parent1Name = model.Parent1Name;
+                entity.Parent2Name = model.Parent2Name;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.Email = model.Email;
+                entity.TypeOfHomeStudy = model.TypeOfHomeStudy;
+                entity.Agency = model.Agency;
+                    
+
+                return ctx.SaveChanges() == 1;
+            }
+        
+        }
+
     }
 }

@@ -39,10 +39,11 @@ namespace KidsFirstTracker.WebMVC.Controllers
 
             if (service.CreateHomeStudy(model))
             {
+                TempData["SaveResult"] = "Your family was created.";
                 return RedirectToAction("Index");
             }
 
-            TempData["SaveResult"] = "Your family was created.";
+            
             ModelState.AddModelError("", "Your family could not be created.");
             
             return View(model);
@@ -55,6 +56,22 @@ namespace KidsFirstTracker.WebMVC.Controllers
 
             return View(model);
         
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateHomeStudyService();
+            var detail = service.GetHomeStudyById(id);
+            var model =
+                new HomeStudyEdit
+                {
+                    HomeStudyId = detail.HomeStudyId,
+                    Parent1Name = detail.Parent1Name,
+                    Parent2Name = detail.Parent2Name,
+                    TypeOfHomeStudy = detail.TypeOfHomeStudy,
+                    Agency = detail.Agency
+                };
+            return View(model);
         }
 
         private HomeStudyService CreateHomeStudyService()

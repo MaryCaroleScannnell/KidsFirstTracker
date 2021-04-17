@@ -84,5 +84,25 @@ namespace KidsFirstTracker.Services
 
         }
 
+        public bool UpdateDomFamily(DomFamilyEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DomFamilies
+                        .Single(e => e.DomFamId == model.DomFamId && e.OwnerId == _userId);
+
+                entity.Parent1Name = model.Parent1Name;
+                entity.Parent2Name = model.Parent2Name;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.Email = model.Email;
+                entity.IsHomeStudyDone = model.IsHomeStudyDone;
+                entity.HomeStudyDate = model.HomeStudyDate;
+
+                return ctx.SaveChanges() == 1;
+            }   
+        }
+
     }
 }

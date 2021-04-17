@@ -56,15 +56,19 @@
   <ItemGroup>
     <Compile Include="ContactInfoCreate.cs" />
     <Compile Include="ContactInfoDetail.cs" />
+    <Compile Include="ContactInfoEdit.cs" />
     <Compile Include="ContactInfoListItem.cs" />
     <Compile Include="DomFamilyCreate.cs" />
     <Compile Include="DomFamilyDetail.cs" />
+    <Compile Include="DomFamilyEdit.cs" />
     <Compile Include="DomFamilyListItem.cs" />
     <Compile Include="HomeStudyCreate.cs" />
     <Compile Include="HomeStudyDetail.cs" />
+    <Compile Include="HomeStudyEdit.cs" />
     <Compile Include="HomeStudyListItem.cs" />
     <Compile Include="IntFamilyCreate.cs" />
     <Compile Include="IntFamilyDetail.cs" />
+    <Compile Include="IntFamilyEdit.cs" />
     <Compile Include="IntFamilyListItem.cs" />
     <Compile Include="PreferencesCreate.cs" />
     <Compile Include="PreferencesListItem.cs" />

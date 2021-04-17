@@ -82,5 +82,25 @@ namespace KidsFirstTracker.Services
             }
         }
 
+        public bool UpdateIntFamily(IntFamilyEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .IntFamilies
+                    .Single(e => e.IntFamId == model.IntFamId && e.OwnerId == _userId);
+
+                entity.Parent1Name = model.Parent1Name;
+                entity.Parent2Name = model.Parent2Name;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.Email = model.Email;
+                entity.Country = model.Country;
+                entity.USCISExpiration = model.USCISExpiration;
+
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

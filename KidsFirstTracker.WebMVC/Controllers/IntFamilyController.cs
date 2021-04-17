@@ -53,6 +53,22 @@ namespace KidsFirstTracker.WebMVC.Controllers
             return View(model);
         
         }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateIntFamilyService();
+            var detail = service.GetIntFamilyById(id);
+            var model =
+                new IntFamilyEdit
+                {
+                    IntFamId = detail.IntFamId,
+                    Parent1Name = detail.Parent1Name,
+                    Parent2Name = detail.Parent2Name,
+                    Country = detail.Country
+                };
+            return View(model);
+        
+        }
         private IntFamilyService CreateIntFamilyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
