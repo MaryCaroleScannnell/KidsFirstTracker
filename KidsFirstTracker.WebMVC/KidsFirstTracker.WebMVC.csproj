@@ -250,6 +250,9 @@
     <Content Include="Views\IntFamily\Details.cshtml" />
     <Content Include="Views\HomeStudy\Details.cshtml" />
     <Content Include="Views\DomFamily\Details.cshtml" />
+    <Content Include="Views\DomFamily\Edit.cshtml" />
+    <Content Include="Views\HomeStudy\Edit.cshtml" />
+    <Content Include="Views\IntFamily\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

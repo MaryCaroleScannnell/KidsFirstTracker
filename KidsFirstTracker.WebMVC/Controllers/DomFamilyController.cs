@@ -2,9 +2,6 @@
 using KidsFirstTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace KidsFirstTracker.WebMVC.Controllers
@@ -71,6 +68,28 @@ namespace KidsFirstTracker.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, DomFamilyEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.DomFamId != id)
+            {
+                ModelState.AddModelError("", "Id mismatch");
+                return View(model);
+            }
+            var service = CreateDomFamilyService();
+
+            if (service.UpdateDomFamily(model))
+            {
+                TempData["SaveResults"] = "Your family was updated";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your family could not be updated");
+            return View(model);
+        }
 
         private DomFamilyService CreateDomFamilyService()
         {

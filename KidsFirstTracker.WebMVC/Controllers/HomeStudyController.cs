@@ -73,6 +73,29 @@ namespace KidsFirstTracker.WebMVC.Controllers
                 };
             return View(model);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, HomeStudyEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            if (model.HomeStudyId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateHomeStudyService();
+
+            if (service.UpdateHomeStudy(model))
+            {
+                TempData["SaveResult"] = "Your family was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your family could not be updated.");
+            return View(model);
+
+        }
 
         private HomeStudyService CreateHomeStudyService()
         {
