@@ -23,5 +23,6 @@ namespace KidsFirstTracker.Models
         public string RacePreference { get; set; }
         [Display(Name = "Open to Out of State")]
         public bool AreTheyOkayWithOtherStates { get; set; }
+        public int? DomFamId { get; set; }
     }
 }

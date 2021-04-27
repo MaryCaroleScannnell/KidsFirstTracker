@@ -89,7 +89,29 @@ namespace KidsFirstTracker.WebMVC.Controllers
             ModelState.AddModelError("", "Your family could not be updated");
             return View(model);
         }
-        
+
+        public ActionResult DeleteIntFamily(int id)
+        {
+            var svc = CreateIntFamilyService();
+            var model = svc.GetIntFamilyById(id);
+
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteIntFam(int id)
+        {
+            var service = CreateIntFamilyService();
+
+            service.DeleteIntFamily(id);
+
+            TempData["SaveResult"] = "Your note was deleted";
+
+            return RedirectToAction("Index");
+        }
         private IntFamilyService CreateIntFamilyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

@@ -21,7 +21,7 @@ namespace KidsFirstTracker.Data
         [ForeignKey(nameof(DomFamily))]
         public int? DomFamId { get; set; }
         public virtual DomFamily DomFamily { get; set; }
-
+        public Guid OwnerId { get; set; }
         [Required]
         [Display(Name ="Gender Preference")]
         public Gender GenderPreference { get; set; }

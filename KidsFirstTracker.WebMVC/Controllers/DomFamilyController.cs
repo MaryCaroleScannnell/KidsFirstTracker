@@ -91,6 +91,27 @@ namespace KidsFirstTracker.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateDomFamilyService();
+            var model = svc.GetDomFamilyById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteDomFamily(int id)
+        {
+            var service = CreateDomFamilyService();
+
+            service.DeleteDomFamily(id);
+
+            TempData["SaveResult"] = "Your family was deleted";
+
+            return RedirectToAction("Index");
+        }
         private DomFamilyService CreateDomFamilyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

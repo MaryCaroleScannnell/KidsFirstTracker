@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace KidsFirstTracker.Models
 {
-    public class PreferencesListItem
+    public class PreferencesDetail
     {
+        public int PreferenceId { get; set; }
         [Display(Name = "Gender Preference")]
         public Gender GenderPreference { get; set; }
-       
+
         [Display(Name = "Youngest Preferred Age")]
         public int MinAge { get; set; }
-       
+
         [Display(Name = "Oldest Preferred Age")]
         public int MaxAge { get; set; }
-        
+
         [Display(Name = "Race Preference")]
         public string RacePreference { get; set; }
         [Display(Name = "Open to Out of State")]
@@ -27,3 +28,4 @@ namespace KidsFirstTracker.Models
         public int? DomFamId { get; set; }
     }
 }
+

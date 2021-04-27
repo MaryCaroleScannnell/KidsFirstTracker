@@ -83,6 +83,21 @@ namespace KidsFirstTracker.Services
         
         }
 
+        public bool DeleteHomeStudy(int homeStudyId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .HomeStudies
+                        .Single(e => e.HomeStudyId == homeStudyId && e.OwnerId == _userId);
+
+                ctx.HomeStudies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
         public bool UpdateHomeStudy(HomeStudyEdit model)
         {
             using (var ctx = new ApplicationDbContext())

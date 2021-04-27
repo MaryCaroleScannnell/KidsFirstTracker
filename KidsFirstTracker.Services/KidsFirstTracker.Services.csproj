@@ -57,6 +57,7 @@
     <Compile Include="DomFamilyService.cs" />
     <Compile Include="HomeStudyService.cs" />
     <Compile Include="IntFamilyService.cs" />
+    <Compile Include="PreferenceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

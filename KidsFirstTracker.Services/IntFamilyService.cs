@@ -82,6 +82,21 @@ namespace KidsFirstTracker.Services
             }
         }
 
+        public bool DeleteIntFamily(int intFamilyId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .IntFamilies
+                        .Single(e => e.IntFamId == intFamilyId && e.OwnerId == _userId);
+
+                ctx.IntFamilies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
         public bool UpdateIntFamily(IntFamilyEdit model)
         {
             using (var ctx = new ApplicationDbContext())

@@ -71,6 +71,8 @@
     <Compile Include="IntFamilyEdit.cs" />
     <Compile Include="IntFamilyListItem.cs" />
     <Compile Include="PreferencesCreate.cs" />
+    <Compile Include="PreferencesDetail.cs" />
+    <Compile Include="PreferencesEdit.cs" />
     <Compile Include="PreferencesListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

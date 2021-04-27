@@ -83,7 +83,20 @@ namespace KidsFirstTracker.Services
 
 
         }
+        public bool DeleteDomFamily(int domFamilyId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .DomFamilies
+                        .Single(e => e.DomFamId == domFamilyId && e.OwnerId == _userId);
 
+                ctx.DomFamilies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public bool UpdateDomFamily(DomFamilyEdit model)
         {
             using (var ctx = new ApplicationDbContext())

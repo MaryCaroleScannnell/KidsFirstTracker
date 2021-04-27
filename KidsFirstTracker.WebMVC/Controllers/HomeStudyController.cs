@@ -97,6 +97,28 @@ namespace KidsFirstTracker.WebMVC.Controllers
 
         }
 
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateHomeStudyService();
+            var model = svc.GetHomeStudyById(id);
+
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteHomeStudy(int id)
+        {
+            var service = CreateHomeStudyService();
+
+            service.DeleteHomeStudy(id);
+
+            TempData["SaveResult"] = "Your family was deleted";
+
+            return RedirectToAction("Index");
+        }
         private HomeStudyService CreateHomeStudyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

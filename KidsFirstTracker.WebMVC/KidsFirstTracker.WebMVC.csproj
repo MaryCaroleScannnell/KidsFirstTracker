@@ -253,6 +253,10 @@
     <Content Include="Views\DomFamily\Edit.cshtml" />
     <Content Include="Views\HomeStudy\Edit.cshtml" />
     <Content Include="Views\IntFamily\Edit.cshtml" />
+    <Content Include="Views\DomFamily\Delete.cshtml" />
+    <Content Include="Views\IntFamily\DeleteIntFamily.cshtml" />
+    <Content Include="Views\HomeStudy\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
