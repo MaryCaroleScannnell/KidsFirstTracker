@@ -1,0 +1,66 @@
+﻿@model KidsFirstTracker.Models.PreferencesDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PreferencesDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferenceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferenceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RacePreference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RacePreference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreTheyOkayWithOtherStates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreTheyOkayWithOtherStates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DomFamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomFamId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

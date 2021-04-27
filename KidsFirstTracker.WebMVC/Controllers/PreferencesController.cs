@@ -18,6 +18,8 @@ namespace KidsFirstTracker.WebMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PreferenceService(userId);
             var model = service.GetPreferences();
+            //var model = new PreferencesListItem[0];
+            //return View(model);
 
 
             return View(model);
