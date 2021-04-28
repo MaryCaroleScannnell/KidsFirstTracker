@@ -5,27 +5,24 @@
 <div class="jumbotron">
     <h1>KidsFirst Tracker</h1>
     <p class="lead">KidsFirst Tracker is a free web framework for tracking adoptive families</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>Domestic Families</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
+        @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-primary btn-large"})
     <div class="col-md-4">
         <h2>International Families</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p>This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
+        @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-primary btn-large" })
+        
     </div>
     <div class="col-md-4">
         <h2>Home Study Families</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <p>This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
+        @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-primary btn-large" })
     </div>
 </div>
