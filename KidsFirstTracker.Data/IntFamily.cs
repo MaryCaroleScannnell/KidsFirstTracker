@@ -9,9 +9,13 @@ namespace KidsFirstTracker.Data
 {
     public enum Country
     {
+        [Display(Name = "Poland")]
         Poland =1,
+        [Display(Name = "Ukraine")]
         Ukraine,
+        [Display(Name = "Dominican Republic")]
         DominicanRepublic,
+        [Display(Name = "Bulgaria")]
         Bulgaria,
 
     }

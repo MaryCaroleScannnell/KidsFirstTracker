@@ -1,0 +1,53 @@
+﻿
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+
+
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    background-color: #C8DCE7;
+    border-bottom: 1px solid #C8DCE7;
+    color: #09547B;
+}
+
+    .jumbotron .btn {
+        padding: 14px 24px;
+        font-size: 21px;
+    }
+
+    .jumbotron h1 {
+        font-family: fantasy;
+    }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+        
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+

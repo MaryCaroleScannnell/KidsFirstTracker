@@ -9,12 +9,18 @@ namespace KidsFirstTracker.Data
 {
     public enum HomeStudyType
     {
+        [Display(Name ="Domestic")]
         Domestic = 1,
+        [Display(Name = "International")]
         International,
+        [Display(Name = "Domestic Update")]
         DomUpdate,
+        [Display(Name = "International Update")]
         InternationalUpdate,
+        [Display(Name = "Addendum")]
         Addendum,
-        PostPlacement,
+        [Display(Name = "Post Placement")]
+        PostPlacement
 
     }
 

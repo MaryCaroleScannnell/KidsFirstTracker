@@ -1,4 +1,6 @@
-﻿@{
+﻿
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -7,22 +9,60 @@
     <p class="lead">KidsFirst Tracker is a free web framework for tracking adoptive families</p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
+@*<div class="row">*@
+    @*<div class="col-md-4">
         <h2>Domestic Families</h2>
         <p>
             This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.
         </p>
-        @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-primary btn-large"})
-    <div class="col-md-4">
-        <h2>International Families</h2>
-        <p>This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
-        @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-primary btn-large" })
-        
+        @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-primary btn-large" })
+        <div class="col-md-4">
+            <h2>International Families</h2>
+            <p>This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
+            @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-primary btn-large" })
+
+        </div>
+        <div class="col-md-4">
+            <h2>Home Study Families</h2>
+            <p>This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
+            @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-primary btn-large" })
+        </div>
+    </div>*@
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Domestic Families</h2>
+            <p class="text-muted">This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.</p>
+        </div>
+        <div class="col-md-7">
+            @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-info btn-large" })
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Home Study Families</h2>
-        <p>This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
-        @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-primary btn-large" })
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">International Families</h2>
+            <p class="text-muted">This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
+            
+        </div>
+        <div class="col-md-7 col-md-push-5">
+            @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-info btn-large" })
+        </div>
     </div>
-</div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Home Study Families</h2>
+            <p class="text-muted">This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
+            </p>
+        </div>
+        <div class="col-md-7">
+            @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-info btn-large" })
+        </div>
+    </div>
+
+   
