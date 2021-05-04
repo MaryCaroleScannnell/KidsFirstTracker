@@ -50,9 +50,9 @@
             @Html.DisplayFor(modelItem => item.HomeStudyDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.DomFamId}) |
+            @Html.ActionLink("Details", "Details", new { id=item.DomFamId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DomFamId })
         </td>
     </tr>
 }

@@ -113,6 +113,7 @@ namespace KidsFirstTracker.Services
                 entity.MaxAge = model.MaxAge;
                 entity.RacePreference = model.RacePreference;
                 entity.AreTheyOkayWithOtherStates = model.AreTheyOkayWithOtherStates;
+                entity.DomFamId = model.DomFamId;
                 
 
                 return ctx.SaveChanges() == 1;

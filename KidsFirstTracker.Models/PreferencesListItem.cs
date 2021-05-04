@@ -10,6 +10,8 @@ namespace KidsFirstTracker.Models
 {
     public class PreferencesListItem
     {
+        [Display(Name ="Preference ID")]
+        public int PreferenceId { get; set; }
         [Display(Name = "Gender Preference")]
         public Gender GenderPreference { get; set; }
        

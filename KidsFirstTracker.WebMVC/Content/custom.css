@@ -12,6 +12,11 @@
 }
 
 
+/*.img{
+    display: block;
+    max-width: 100%;
+    height:auto;
+}*/
 
 
 /* Main marketing message and sign up button */
@@ -49,5 +54,10 @@
     .jumbotron {
         border-bottom: 0;
     }
+
+    .navbar-inverse {
+        background-color: black;
+    }
+
 }
 
