@@ -9,7 +9,7 @@
     <img src="~/Images/ShortLogo.png" class="text-center img-rounded" alt="Logo">
     
     <h1>KidsFirst Tracker</h1>
-    <p class="lead">Keeping staff organize so we can focus on what is important: Putting Kids First!</p>
+    <p class="lead">Keeping staff organized so we can focus on what is important: Putting Kids First!</p>
 </div>
 
 @*<div class="row">*@
@@ -32,40 +32,42 @@
         </div>
     </div>*@
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">Domestic Families</h2>
-            <p class="text-muted">This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.</p>
-        </div>
-        <div class="col-md-7">
-            @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-info btn-large" })
-        </div>
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Domestic Families</h2>
+        <p class="text-muted">This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.</p>
+        @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-info btn-large" })
     </div>
+    <div class="col-md-5">
+        
+        <img src="~/Images/DomFamily.jpg" class="img-lg featurette-image img-fluid mx-auto img-rounded" width="500" height="341" alt="DomFamily" preserveAspectRatio="xMidYMid slice" focusable="false">
+    </div>
+</div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
+        <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">International Families</h2>
             <p class="text-muted">This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
-            
-        </div>
-        <div class="col-md-7 col-md-push-5">
             @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-info btn-large" })
         </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">Home Study Families</h2>
-            <p class="text-muted">This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
-            </p>
-        </div>
-        <div class="col-md-7">
-            @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-info btn-large" })
+       
+        <div class="col-md-5 order-md-1">
+            <img src="~/Images/DRFlag.jpg" class="img-lg featurette-image img-fluid mx-auto img-rounded" width="500" height="333" alt="DRFlag" preserveAspectRatio="xMidYMid slice" focusable="false">
         </div>
     </div>
+        <hr class="featurette-divider">
 
-   
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Home Study Families</h2>
+                <p class="text-muted">This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
+                @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-info btn-large" })
+            </div>
+            
+            <div class="col-md-5">
+                <img src="~/Images/HomeStudy.jpg" class="img-lg featurette-image img-fluid mx-auto img-rounded" width="333" height="500" alt="HomeStudy" preserveAspectRatio="xMidYMid slice" focusable="false">
+            </div>
+        </div>
+

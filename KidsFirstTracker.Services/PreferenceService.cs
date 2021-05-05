@@ -48,6 +48,7 @@ namespace KidsFirstTracker.Services
                             e =>
                                 new PreferencesListItem
                                 {
+                                    PreferenceId = e.PreferenceId,
                                     DomFamId = e.DomFamId,
                                     GenderPreference = e.GenderPreference,
                                     MinAge = e.MinAge,
