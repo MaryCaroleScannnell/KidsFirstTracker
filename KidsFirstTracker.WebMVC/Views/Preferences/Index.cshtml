@@ -3,56 +3,58 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="jumbotron">
+    <img src="~/Images/ShortLogo.png" class="text-center img-rounded" width="200" height="200" alt="Logo">
+    <h2>List of Preferences</h2>
+</div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
 
-<h2>List of Preferences</h2>
+            <th>
+                @Html.DisplayNameFor(model => model.MinAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RacePreference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreTheyOkayWithOtherStates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DomFamId)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.MinAge)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaxAge)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RacePreference)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AreTheyOkayWithOtherStates)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DomFamId)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinAge)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxAge)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RacePreference)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AreTheyOkayWithOtherStates)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DomFamId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PreferenceId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PreferenceId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PreferenceId })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MinAge)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaxAge)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RacePreference)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AreTheyOkayWithOtherStates)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DomFamId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PreferenceId}) |
-            @Html.ActionLink("Details", "Details", new { id = item.PreferenceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PreferenceId })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>

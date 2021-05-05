@@ -4,33 +4,21 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+<!--<div class="jumbotron">-->
     
-    <img src="~/Images/ShortLogo.png" class="text-center img-rounded" alt="Logo">
+    @*<img src="~/Images/ShortLogo.png" class="text-center img-rounded" width="200" height="200"  alt="Logo">
     
     <h1>KidsFirst Tracker</h1>
-    <p class="lead">Keeping staff organized so we can focus on what is important: Putting Kids First!</p>
+    <p class="lead">Keeping staff organized so we can focus on what is important: Putting Kids First!</p>*@
+<!--</div>-->
+
+<div class="page-header">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <img src="~/Images/KidsFirstTracker.png" alt="Header">
+    </div>
 </div>
 
-@*<div class="row">*@
-    @*<div class="col-md-4">
-        <h2>Domestic Families</h2>
-        <p>
-            This list will show the contact information for all domestic families working with KidsFirst. It will also show home study status and date of expiration.
-        </p>
-        @Html.ActionLink("View Families", "Index", "DomFamily", null, new { @class = "btn btn-primary btn-large" })
-        <div class="col-md-4">
-            <h2>International Families</h2>
-            <p>This list will show the contact information for all international families working with KidsFirst. It will also show the country and USCIS expiration date.</p>
-            @Html.ActionLink("View Families", "Index", "IntFamily", null, new { @class = "btn btn-primary btn-large" })
-
-        </div>
-        <div class="col-md-4">
-            <h2>Home Study Families</h2>
-            <p>This list will show the contact information for all families completing their home study. It will include contact information, and their primary agency.</p>
-            @Html.ActionLink("View Families", "Index", "HomeStudy", null, new { @class = "btn btn-primary btn-large" })
-        </div>
-    </div>*@
+<hr class="featurette-divider">
 
 <div class="row featurette">
     <div class="col-md-7">

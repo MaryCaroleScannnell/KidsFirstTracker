@@ -3,57 +3,59 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="jumbotron">
+    <img src="~/Images/ShortLogo.png" class="text-center img-rounded" width="200" height="200" alt="Logo">
+    <h2>International Family List</h2>
+</div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Parent1Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Parent2Name)
+            </th>
 
-<h2>International Family List</h2>
+            <th>
+                @Html.DisplayNameFor(model => model.IntFamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.USCISExpiration)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Parent1Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Parent2Name)
-        </th>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.IntFamId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Country)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.USCISExpiration)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Parent1Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Parent2Name)
+                </td>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Parent1Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Parent2Name)
-    </td>
-    
-    <td>
-        @Html.DisplayFor(modelItem => item.IntFamId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Country)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.USCISExpiration)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id=item.IntFamId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.IntFamId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.IntFamId })
-    </td>
-</tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.IntFamId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.USCISExpiration)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IntFamId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IntFamId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IntFamId })
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
