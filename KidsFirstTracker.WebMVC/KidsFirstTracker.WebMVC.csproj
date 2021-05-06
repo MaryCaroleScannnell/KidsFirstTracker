@@ -194,6 +194,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\DomFamilyPic.png" />
+    <Content Include="Images\HomeStudyPic.png" />
+    <Content Include="Images\IntFamilyPic.png" />
     <Content Include="Images\KidsFirstTracker.png" />
     <Content Include="Images\kidsfirstLogo.png" />
     <Content Include="Images\DRFlag.jpg" />

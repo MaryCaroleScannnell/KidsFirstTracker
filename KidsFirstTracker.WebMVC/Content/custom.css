@@ -1,5 +1,8 @@
 ﻿
 
+.body-content {
+    background-color: #f0f0ea;
+}
 
 .featurette-divider {
     margin: 80px 0; /* Space out the Bootstrap <hr> more */
@@ -10,13 +13,14 @@
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+    color: #a89387;   
 }
 
 
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
-    /*background-color: #C8DCE7;*/
+    background-color: #DAEAEF;
     border-bottom: 1px solid #C8DCE7;
     color: #09547B;
     background-image: url(~/Images/KidsFirstTracker.png);
